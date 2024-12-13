@@ -48,6 +48,7 @@ export const Carousel = ({ games }) => {
     let game_link =
       item.game_link == null ? "https:game.com.pk" : item.game_link;
     let token = localStorage.getItem("kpobit_token");
+    console.log('get from set =======',token);
 
     game_link = game_link + "?token=" + token;
     game_link = game_link + "&game_id=" + 5;
