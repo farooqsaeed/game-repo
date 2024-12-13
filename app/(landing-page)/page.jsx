@@ -29,7 +29,7 @@ export default function Login() {
         }
 
         Swal.fire("Success!", "Login successful!", "success");
-        router.push("/dashboard");
+        router.push("/landing-page");
       } else {
         Swal.fire("Error!", response.data.message || "Login failed.", "error");
       }
