@@ -24,6 +24,8 @@ export default function Login() {
       const response = await post("/api/login", data);
       if (response.success) {
         if (typeof window !== "undefined") {
+          console.log(response.data)
+          console.log(response.data.token)
           localStorage.setItem("game_user_token", response.data.token);
           localStorage.setItem("game_user_data", JSON.stringify(response.data));
         }
