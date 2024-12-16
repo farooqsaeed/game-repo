@@ -30,13 +30,13 @@ export default function Login() {
         }
 
         Swal.fire("Success!", "Login successful!", "success");
-        // Redirect based on user_type
-        if (response.data.user_type == 1) {
+        console.log("Redirecting, user_type: ", response.data.user_type);
+        if (response.data.user_type === 1) {
           router.push("/dashboard");
         } else {
           router.push("/landing-page");
         }
-        // router.push("/dashboard");
+
       } else {
         Swal.fire("Error!", response.data.message || "Login failed.", "error");
       }
