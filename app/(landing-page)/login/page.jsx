@@ -29,8 +29,8 @@ export default function Login() {
           localStorage.setItem("kpobit_user", JSON.stringify(response.data));
         }
 
-        Swal.fire("Success!", "Login successful!", "success");
         console.log("Redirecting, user_type: ", response.data.user_type);
+        Swal.fire("Success!", "Login successful!.", "success");
         if (response.data.user_type === 1) {
           router.push("/dashboard");
         } else {
