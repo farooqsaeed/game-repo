@@ -22,7 +22,7 @@ export default function Login() {
   const onSubmit = async (data) => {
     try {
       const response = await post("/api/login", data);
-      console.log("response: ", response);
+      console.log("response sssssss: ", response);
       if (response.success) {
         if (typeof window !== "undefined") {
           localStorage.setItem("kpobit_token", response.data.token);
