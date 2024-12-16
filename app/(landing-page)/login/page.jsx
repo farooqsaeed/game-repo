@@ -36,7 +36,6 @@ export default function Login() {
         } else {
           router.push("/landing-page");
         }
-
         // router.push("/dashboard");
       } else {
         Swal.fire("Error!", response.data.message || "Login failed.", "error");
