@@ -31,7 +31,7 @@ export default function Login() {
 
         Swal.fire("Success!", "Login successful!", "success");
         // Redirect based on user_type
-        if (response.data.user_type === 1) {
+        if (response.data.user_type == 1) {
           router.push("/dashboard");
         } else {
           router.push("/landing-page");
